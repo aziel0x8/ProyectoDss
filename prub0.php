@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php 
-        echo "prub 0"
+        echo "<h1>Probando cambios</h1>";
     
     ?>
     
