@@ -23,7 +23,7 @@
 	  <input type="mail" id="correo"  name="correo" required><br><br>
 	  <label for="dui">DUI:</label>		
 	  <input type="text" pattern="\d{8}-\d" id="dui"  name="dui" required><br><hr>
-	  <div class="buscarContra"><input type="submit" name="enviar" value="Buscar"></div>
+	  <div class="buscarContra"><input type="submit" value="Buscar"></div>
 	</form> 
 	</div>
 	</div>
