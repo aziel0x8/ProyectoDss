@@ -2,34 +2,25 @@
 
 
 
-// include("conexion.php");
 
-        // <input type="text" name="dui">
-        // <input type="text" name="usuario">
-        // <input type="text" name="contra">
-        // <input type="text" name="correo">
-        // <input type="text" name="fecNac">
-        //falta en pass en bd
-// if (strlen($_POST['dui']) < 1 && strlen($_POST['usuario']) < 1&& strlen($_POST['correo']) && strlen($_POST['fecNac'])<1) {
-
+include("conexion.php");
 $dui = trim($_POST['dui']);
 $usuario = trim($_POST['usuario']);
 $correo = trim($_POST['correo']);
-// $fecNac = trim($_POST['fecNac']);
+$fecNac =trim($_POST['fecnac']) ;
+$contra =trim($_POST['contra']);
 
-echo $dui." ".$usuario." ".$correo." ".$dui ;
+$query ="INSERT INTO `usuario`(`DUI_Usuario`, `Nombre_Usuario`, `Correo_Electronico`, `FechaNacimiento` , `Pass`) VALUES ('$dui','$usuario','$correo','$fecNac','$contra')";
 
-// $query =" INSERT INTO Usuario VALUES('$dui','$usuario','$correo','$fecNac')";
-// $finconsulta = mysqli_query($conexion,$query);
+$finconsulta = mysqli_query($conexion,$query);
 
-//         if ($finconsulta) {
-//             echo "<p>Conexion exitosa</p>";
-//         }else{
-//             echo "<p>Conexion fallida</p>"; 
-//         }
+        if ($finconsulta) {
+            echo "<p>Conexion exitosa</p>";
 
-
-    // }
+            echo "<p>Dui".$dui."<br>Ususario ".$usuario."<br>Correo".$correo."<br>Fecha de Nacimeinto".$fecNac."<br>Contraseña".$contra."</p>";
+        }else{
+            echo "<p>Conexion fallida</p>"; 
+        }
 
 
 ?>
