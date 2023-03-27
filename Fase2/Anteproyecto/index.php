@@ -17,17 +17,20 @@
 <div class="wrapper">
 <div class="formulario">
 	<div class="encabezado"><h2>Login</h2><hr></div>
-	<form>	
+	<form method="post" action="">	
 	  <label for="usuario">Usuario:</label>
 	  <input type="text" id="usuario"  name="usuario"><br><br>
 	  <label for="contra">Contraseña:</label>
 	  <input type="text" id="contra"  name="contra"><br>
-	  <img id="imagen" src="img/img.jpg" alt="">
+	  <?php
+include("base/procesar.php");
+?>
 	  <div class="opciones">	
 	  <a href="recursos/olvidoContra.php" id="btncrear">Olvide contraseña</a>|
 	  <a href="recursos/registro.php">Crear Cuenta</a>
 	  </div>
-	  <input type="submit" value="LOGIN">
+	  <input type="submit" name="enviar" value="LOGIN">
+	  
 	</form> 
 	</div>
 	</div>

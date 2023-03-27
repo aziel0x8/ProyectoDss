@@ -1,0 +1,2 @@
+probando el por que al comparar con el main 
+no sale lo mis mismo que en el otro repositorio
